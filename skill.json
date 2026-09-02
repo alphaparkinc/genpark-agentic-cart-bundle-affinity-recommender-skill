@@ -1,0 +1,38 @@
+{
+  "name": "genpark-agentic-cart-bundle-affinity-recommender-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Agentic cart cross-sell and bundle affinity recommender calculating frequent itemset co-occurrence probabilities to maximize AOV.",
+  "author": "genpark",
+  "category": "recommender-systems",
+  "tags": [
+    "bundle-recommender",
+    "cart-cross-sell",
+    "affinity-scoring",
+    "aov-optimization",
+    "frequent-itemsets"
+  ],
+  "inputs": {
+    "active_cart_skus": {
+      "type": "array"
+    },
+    "max_bundle_recommendations": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "recommendation_batch_id": {
+      "type": "string"
+    },
+    "recommended_cross_sell_skus": {
+      "type": "array"
+    },
+    "projected_aov_lift_pct": {
+      "type": "number"
+    },
+    "bundle_deal_manifest_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
